@@ -1,3 +1,6 @@
+/*score: 8 + 1(extra credit)
+comments: good! But be careful with corner cases
+*/
 /**
  * Created by Rose on 1/21/17.
  * Assignment for your lecture 2. Please finish all the questions under
@@ -70,7 +73,7 @@ public class Assignment2 {
      * If the employee is under 35, rate is 3% of salary; if the employee is between 35 and 50(inclusive), rate is 4% of salary;
      * If the employee is between 50 and 60(exclusive), rate is 5% of salary; If the employee is above 60, rate is 6% of salary.
      */
-    public double insuranceCoverage(Employee employee) 
+    public double insuranceCoverage(Employee employee)                  //correct
     {
     	if ((employee.age <= 35))
         {
@@ -95,7 +98,7 @@ public class Assignment2 {
      * For example, Alice's salary is 1000, John's salary is 500, Jenny's salary is 1200, you should print:
      * John Alice Jenny
      */
-    public void sortSalary(Employee e1, Employee e2, Employee e3) 
+    public void sortSalary(Employee e1, Employee e2, Employee e3)                          //correct
     {
     	if (e1.salary > e2.salary)
         {
@@ -142,7 +145,7 @@ public class Assignment2 {
      * Do not change the input of this method.
      * Try to add a new method in Employee class: public void raiseSalary(double byPercent)
      */
-    public void tripleSalary(Employee employee) 
+    public void tripleSalary(Employee employee)                                 //may put raiseSalary()method in Employee class
     {
         employee.raiseSalary(300); 
     }
@@ -175,7 +178,7 @@ public class Assignment2 {
      * result has only one digit. For example: Given n = 38, the process is
      * like: 3 + 8 = 11, 1 + 1 = 2. Since 2 has only one digit, return it.
      */
-    public int addDigits(int n)
+    public int addDigits(int n)                             //miss one case: if n is a one-digit number, your return is 0, but it should return n;eg: n = 3, your should return 3 instead of 0
     {
     	int initial_sum = 0;
         int digit ;
@@ -223,7 +226,7 @@ public class Assignment2 {
      * another prime factor 7. Note that 1 is typically treated as an ugly
      * number.
      */
-    public boolean isUgly(int n) {
+    public boolean isUgly(int n) {                            //miss one case: if n is negative, your return is true. But you should return false
     	if(n == 1)
 		{
 			return true;
@@ -269,6 +272,7 @@ public class Assignment2 {
      * Write your understanding of the reason and explain it.
      */
     /*
+    //correct
     Java is pass by value not pass by reference.
      Objects stores the reference of the values and not values exactly, that is why we can't swap objects. 
      However we can swap values in java.
