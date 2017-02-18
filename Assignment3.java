@@ -1,3 +1,6 @@
+/*score: 9 + 0(extra credit)
+comments: good job! keep doing!
+*/
 package Test;
 
 /**
@@ -15,7 +18,7 @@ public class Assignment3 {
 * Given an array, reverse the elements within this array and print the result
 * eg, given{1,2,3,4}, print{4,3,2,1}
 */
-public void reverseArray(int[] nums) {
+public void reverseArray(int[] nums) {     //correct
 	for(int i=0;i<nums.length;i++)
 	{
 		System.out.println(nums[i]);
@@ -33,7 +36,7 @@ public void reverseArray(int[] nums) {
 * The digits are stored such that the most significant digit is at the head of the array.
 * eg, given {1,2,9}, reutrn{1,3,0}.
 */
-public void plusOne(int[] digits) {
+public void plusOne(int[] digits) {                  //wrong: please try the input of {1,2}
 	boolean flag = false;
 	for(int i = 0; i<digits.length; i++)
 	{
@@ -77,7 +80,7 @@ public void plusOne(int[] digits) {
 * Write a program that takes an integer as input and returns all the primes between 1 and that integer(inclusive).
 * eg, input is 18, you should return{2,3,5,7,11,13,17}
 */
-public int[] generatePrimes(int n) {
+public int[] generatePrimes(int n) {           //one problem: there are a lot of zeroes at the end of the array, how to get rid of these zeroes?
 	int[] output_array = new int[n];
 	int count = 0;
 	for(int i=2;i<=n;i++)
@@ -106,7 +109,7 @@ public int[] generatePrimes(int n) {
 * to isSubstring
 * eg, "pineapple" is a rotation of "neapplepi"
 */
-public boolean isRotation(String s1, String s2) {
+public boolean isRotation(String s1, String s2) {                //correct
 	boolean flag = false;
 	for(int i = 0; i<s1.length(); i++)
 	{
@@ -128,7 +131,7 @@ public boolean isRotation(String s1, String s2) {
 * Given two strings, write a method to decide if one is a permutation of the other
 * hint: the comparison is case sensitive and whitespace is significant
 */
-public boolean isPermutation(String s1, String s2) {
+public boolean isPermutation(String s1, String s2) {          //correct
 	if(s1.length() == s2.length())
 	{
 		char[] s1_Array = new char[s1.length()];
@@ -189,7 +192,7 @@ public boolean isPermutation(String s1, String s2) {
 * the string to be encoded consists of letters of the alphabet, with no digits, and the string to be
 * decoded is a valid encoding.
 */
-public static String encoding(String s) {
+public static String encoding(String s) {        //correct
 	String newName = "";
 	for(int i=0;i<s.length();i++)
 	{
@@ -274,7 +277,7 @@ public static String decoding(String s) {
 * 7,8,9 9 6 3
 *tip: image could be a square or a rectangle.
 */
-public static int[][] rotate(int[][] matrix) {
+public static int[][] rotate(int[][] matrix) {      //wrong: when input is {{1,2,3}, {4,5,6}}, array is out of bound
 	int temp;
 	for(int i = 0; i<matrix.length; i++)
 	{
@@ -308,7 +311,7 @@ public static int[][] rotate(int[][] matrix) {
 * intput is not valid, return -1. A valid parentheses is "()". For example, given "(())", return 2;
 * given "(()))", return -1.
 */
-public int countValidParentheses(String s) {
+public int countValidParentheses(String s) {          //wrong: if input is ")(", you should return -1 since it is not valid
 	
 		int left_Parenthesis_Count = 0;
 		int right_Parenthesis_Count = 0;
