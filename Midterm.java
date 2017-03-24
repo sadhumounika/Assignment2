@@ -2,7 +2,7 @@ package MidTerm;
 import java.util.*;
 
 public class Midterm {
-	        public static void reverse(ArrayList<Integer> list) {
+	        public static void reverse(ArrayList<Integer> list) {            //correct
 			int temp=list.size();
 			for (int i=temp-1;i>=0;i--) {
 				list.add(list.get(i));
@@ -15,7 +15,7 @@ public class Midterm {
 			}
 		}
 		
-		public static String generateStrings(String string1,String string2){
+		public static String generateStrings(String string1,String string2){      //correct
 			Set<String> sts=new TreeSet<String>();
 			for(int i=0;i<string1.length();i++){
 				for(int j=0;j<string2.length();j++){
@@ -30,14 +30,14 @@ public class Midterm {
 			return st;
 		}
 		
-		public static int singelNumber(int[] nums) {
+		public static int singelNumber(int[] nums) {      //correct
 			int result = 0;
 			for (int a : nums)
 			    result ^= a;
 			return result;
 		}
 		
-		public int[] twoSum(int[] nums,int target){
+		public int[] twoSum(int[] nums,int target){       //correct
        HashMap<Integer, Integer> hm = new HashMap<Integer, Integer>();
        int[] returnnums = new int[2];
        for(int i=0;i<nums.length;i++){
@@ -53,7 +53,7 @@ public class Midterm {
        return returnnums;
        }
 		
-			public static List<Integer> getRow(int rowIndex){
+			public static List<Integer> getRow(int rowIndex){         //correct
             int[][] array = new int[rowIndex+1][rowIndex+1];
             for(int i = 0; i< rowIndex+1; i++){
             for(int j =0; j<i+1; j++){
